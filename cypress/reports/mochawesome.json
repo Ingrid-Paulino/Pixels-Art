@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 12,
-    "tests": 41,
-    "passes": 1,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
-    "failures": 40,
-    "start": "2021-07-08T18:14:35.201Z",
-    "end": "2021-07-08T18:18:08.606Z",
-    "duration": 213405,
+    "failures": 0,
+    "start": "2021-07-08T22:59:12.949Z",
+    "end": "2021-07-08T22:59:32.485Z",
+    "duration": 19536,
     "testsRegistered": 41,
-    "passPercent": 2.4390243902439024,
+    "passPercent": 0,
     "pendingPercent": 0,
-    "other": 0,
-    "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "other": 12,
+    "hasOther": true,
+    "skipped": 41,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "d36bd8ec-d10f-4d49-81b6-ae6aa588d822",
+      "uuid": "3aa14d0f-97b3-4419-96aa-9a93f5da7f97",
       "title": "",
       "fullFile": "cypress/integration/project.spec.js",
       "file": "cypress/integration/project.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1fdb00a5-ead6-4fc9-bf81-167c256a41e9",
+          "uuid": "f7212bc2-9d8c-43b6-af8f-46829fd0d7e3",
           "title": "1 - Adicione à página o título \"Paleta de Cores\".",
           "fullFile": "",
           "file": "",
@@ -38,35 +38,39 @@
               "title": "Verifica se contém um elemento `h1` com o id `title` com o título correto",
               "fullTitle": "1 - Adicione à página o título \"Paleta de Cores\". Verifica se contém um elemento `h1` com o id `title` com o título correto",
               "timedOut": null,
-              "duration": 676,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 1649,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.get('h1#title').should('contain.text', 'Paleta de Cores');",
-              "err": {},
-              "uuid": "a098553a-b8bf-41c4-b514-ade228736122",
-              "parentUUID": "1fdb00a5-ead6-4fc9-bf81-167c256a41e9",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '1 - Adicione à página o tít...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '1 - Adicione à página o tít...'\n    at http://localhost:37991/script.js:40:15",
+                "diff": null
+              },
+              "uuid": "275823b6-a69c-4232-a8a0-8f5fcd77929d",
+              "parentUUID": "f7212bc2-9d8c-43b6-af8f-46829fd0d7e3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "a098553a-b8bf-41c4-b514-ade228736122"
+          "passes": [],
+          "failures": [
+            "275823b6-a69c-4232-a8a0-8f5fcd77929d"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 676,
+          "duration": 1649,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+          "uuid": "94556c88-29cf-4f3b-83e8-aec8069c6266",
           "title": "2 - Adicione à página uma paleta de quatro cores distintas.",
           "fullFile": "",
           "file": "",
@@ -77,7 +81,7 @@
               "title": "A paleta de cores deve ser um elemento com `id` denominado `color-palette`",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. A paleta de cores deve ser um elemento com `id` denominado `color-palette`",
               "timedOut": null,
-              "duration": 5006,
+              "duration": 2038,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -86,12 +90,12 @@
               "context": null,
               "code": "cy.get('#color-palette').should('be.visible');",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '2 - Adicione à página uma p...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '2 - Adicione à página uma p...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "15700462-737b-4d31-a5d0-3fcaf3cb1c0a",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "uuid": "1c3e9c6b-3ede-4c8a-8b49-75e64522e922",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
               "skipped": false
             },
@@ -99,155 +103,132 @@
               "title": "Verifica se cada cor individual da paleta de cores possui a `classe` chamada `color`.",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se cada cor individual da paleta de cores possui a `classe` chamada `color`.",
               "timedOut": null,
-              "duration": 4815,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').should('have.length', 4).then(function (colors) {\n  for (var i = 0; i < colors.length; i++) {\n    cy.wrap(colors[i]).should('be.visible');\n  }\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "816471b2-4630-4df5-bc20-b5210d489d91",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "err": {},
+              "uuid": "f7878fd3-c546-4216-8506-2a8107d0a22c",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se a cor de fundo de cada elemento da paleta é a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca.**",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a cor de fundo de cada elemento da paleta é a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca.**",
               "timedOut": null,
-              "duration": 4916,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  cy.wrap(color).should('have.class', 'color').and('not.have.css', 'background-color', WHITE);\n  cy.wrap(color).should('have.css', 'background-color');\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "8ef85ef5-8c8f-43d3-80cc-634ee504e7b3",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "err": {},
+              "uuid": "42acf89a-5c2c-4f7a-8c8a-b98ba8186eeb",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se cada elemento da paleta de cores tem uma borda preta, sólida e com 1 pixel de largura;",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se cada elemento da paleta de cores tem uma borda preta, sólida e com 1 pixel de largura;",
               "timedOut": null,
-              "duration": 4874,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  cy.wrap(color).and('have.css', 'border', \"1px solid \".concat(BLACK)).and('have.class', 'color');\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "4206d576-cc65-4539-8dd7-e45ab4bc5eb2",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "err": {},
+              "uuid": "0299988a-cac9-4676-9a7e-2930d70ff022",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se a paleta lista todas as cores disponíveis para utilização, lado a lado.",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a paleta lista todas as cores disponíveis para utilização, lado a lado.",
               "timedOut": null,
-              "duration": 4883,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  for (var index = 1; index < colors.length; index += 1) {\n    var currentColor = colors[index];\n    var previousColor = colors[index - 1];\n    cy.wrap(currentColor).should('be.onTheRightOf', previousColor).and('be.horizontallyAlignedWith', previousColor);\n  }\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "01abd120-1c9d-4b5f-86db-13385d4c84a4",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "err": {},
+              "uuid": "3226663a-8a39-436a-a6b7-75afff0e491a",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se a paleta de cores está posicionada abaixo do título 'Paleta de Cores'",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a paleta de cores está posicionada abaixo do título 'Paleta de Cores'",
               "timedOut": null,
-              "duration": 4957,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('h1#title').then(function (title) {\n  cy.get('#color-palette').should('be.belowOf', title);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "f31db805-4704-457d-98f7-824beb222d62",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "err": {},
+              "uuid": "09a07269-a155-4c87-a851-30759aeea330",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se a paleta de cores não contém cores repetidas.",
               "fullTitle": "2 - Adicione à página uma paleta de quatro cores distintas. Verifica se a paleta de cores não contém cores repetidas.",
               "timedOut": null,
-              "duration": 4874,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  var allColors = Array.from(colors).map(function (color) {\n    return Cypress.$(color).css('background-color');\n  });\n  cy.log(allColors);\n  var uniqColors = (0, _toConsumableArray2[\"default\"])(new Set(allColors));\n  cy.log(uniqColors);\n  expect(allColors.length).to.eq(uniqColors.length);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "20c4f2ff-52ee-43c3-8cf8-fa2e176921e9",
-              "parentUUID": "9d7a9c0d-876f-46a9-a751-a8cff6e28f05",
+              "err": {},
+              "uuid": "8352603e-b3a0-4a2a-9237-0f35d46fbc20",
+              "parentUUID": "94556c88-29cf-4f3b-83e8-aec8069c6266",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "15700462-737b-4d31-a5d0-3fcaf3cb1c0a",
-            "816471b2-4630-4df5-bc20-b5210d489d91",
-            "8ef85ef5-8c8f-43d3-80cc-634ee504e7b3",
-            "4206d576-cc65-4539-8dd7-e45ab4bc5eb2",
-            "01abd120-1c9d-4b5f-86db-13385d4c84a4",
-            "f31db805-4704-457d-98f7-824beb222d62",
-            "20c4f2ff-52ee-43c3-8cf8-fa2e176921e9"
+            "1c3e9c6b-3ede-4c8a-8b49-75e64522e922"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 34325,
+          "skipped": [
+            "f7878fd3-c546-4216-8506-2a8107d0a22c",
+            "42acf89a-5c2c-4f7a-8c8a-b98ba8186eeb",
+            "0299988a-cac9-4676-9a7e-2930d70ff022",
+            "3226663a-8a39-436a-a6b7-75afff0e491a",
+            "09a07269-a155-4c87-a851-30759aeea330",
+            "8352603e-b3a0-4a2a-9237-0f35d46fbc20"
+          ],
+          "duration": 2038,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "57c77e4b-e8d2-4674-8330-18ffe67b2726",
+          "uuid": "729ff8b5-5037-4a83-b56c-d6b213c52271",
           "title": "3 - Adicione a cor **preta** como a primeira cor da paleta de cores.",
           "fullFile": "",
           "file": "",
@@ -258,7 +239,7 @@
               "title": "Verifica se a primeira cor da paleta é preta",
               "fullTitle": "3 - Adicione a cor **preta** como a primeira cor da paleta de cores. Verifica se a primeira cor da paleta é preta",
               "timedOut": null,
-              "duration": 5298,
+              "duration": 1524,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -267,12 +248,12 @@
               "context": null,
               "code": "cy.get('.color').first().should('have.css', 'background-color', BLACK);",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '3 - Adicione a cor **preta*...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '3 - Adicione a cor **preta*...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "a11f8133-4c3d-4f2f-8f6a-38a208ab3196",
-              "parentUUID": "57c77e4b-e8d2-4674-8330-18ffe67b2726",
+              "uuid": "238479cb-3de5-49f6-88da-846def6ab723",
+              "parentUUID": "729ff8b5-5037-4a83-b56c-d6b213c52271",
               "isHook": false,
               "skipped": false
             },
@@ -280,40 +261,37 @@
               "title": "Verifica se as demais cores podem ser escolhidas livremente.",
               "fullTitle": "3 - Adicione a cor **preta** como a primeira cor da paleta de cores. Verifica se as demais cores podem ser escolhidas livremente.",
               "timedOut": null,
-              "duration": 5039,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').eq(1).should('not.have.css', 'background-color', BLACK);\ncy.get('.color').eq(1).should('not.have.css', 'background-color', WHITE);\ncy.get('.color').eq(1).should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)');\ncy.get('.color').eq(1).should('have.css', 'background-color');\ncy.get('.color').eq(2).should('not.have.css', 'background-color', BLACK);\ncy.get('.color').eq(2).should('not.have.css', 'background-color', WHITE);\ncy.get('.color').eq(2).should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)');\ncy.get('.color').eq(2).should('have.css', 'background-color');\ncy.get('.color').eq(3).should('not.have.css', 'background-color', BLACK);\ncy.get('.color').eq(3).should('not.have.css', 'background-color', WHITE);\ncy.get('.color').eq(3).should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)');\ncy.get('.color').eq(3).should('have.css', 'background-color');",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "040c0434-5e24-4dd2-b7c0-1793cefad495",
-              "parentUUID": "57c77e4b-e8d2-4674-8330-18ffe67b2726",
+              "err": {},
+              "uuid": "63f3b2fa-5aff-46df-9912-75fdd69409aa",
+              "parentUUID": "729ff8b5-5037-4a83-b56c-d6b213c52271",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "a11f8133-4c3d-4f2f-8f6a-38a208ab3196",
-            "040c0434-5e24-4dd2-b7c0-1793cefad495"
+            "238479cb-3de5-49f6-88da-846def6ab723"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 10337,
+          "skipped": [
+            "63f3b2fa-5aff-46df-9912-75fdd69409aa"
+          ],
+          "duration": 1524,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "a827e10b-9b33-49e0-9267-8dc17f42ac6d",
+          "uuid": "9801e105-5734-4b9a-bf87-4f9c01fd1134",
           "title": "4 - Adicione à página um quadro de pixels, com 25 pixels.",
           "fullFile": "",
           "file": "",
@@ -324,7 +302,7 @@
               "title": "Verifica se o quadro de pixels possui o `id` denominado `pixel-board`",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se o quadro de pixels possui o `id` denominado `pixel-board`",
               "timedOut": null,
-              "duration": 4955,
+              "duration": 1277,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -333,12 +311,12 @@
               "context": null,
               "code": "cy.get('#pixel-board').should('be.visible');",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#pixel-board', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#pixel-board', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '4 - Adicione à página um qu...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '4 - Adicione à página um qu...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "930e589e-2d75-4ee0-8623-f099e8067b3c",
-              "parentUUID": "a827e10b-9b33-49e0-9267-8dc17f42ac6d",
+              "uuid": "3b1f1c5d-cca6-45c9-995a-62fa6d711f24",
+              "parentUUID": "9801e105-5734-4b9a-bf87-4f9c01fd1134",
               "isHook": false,
               "skipped": false
             },
@@ -346,86 +324,75 @@
               "title": "Verifica se cada pixel individual dentro do quadro possui a `classe` denominada `pixel`.",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se cada pixel individual dentro do quadro possui a `classe` denominada `pixel`.",
               "timedOut": null,
-              "duration": 5025,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.pixel').should('have.length', 25);",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "cd4b9af1-4046-4620-b909-cad8ef8d5d41",
-              "parentUUID": "a827e10b-9b33-49e0-9267-8dc17f42ac6d",
+              "err": {},
+              "uuid": "538485f9-7ad9-4b5e-a939-6bccfb109178",
+              "parentUUID": "9801e105-5734-4b9a-bf87-4f9c01fd1134",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se a cor inicial dos pixels dentro do quadro, ao abrir a página, é branca.",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se a cor inicial dos pixels dentro do quadro, ao abrir a página, é branca.",
               "timedOut": null,
-              "duration": 4940,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.pixel').should('have.length', 25).each(function (pixel) {\n  expect(pixel).to.have.css('background-color', WHITE);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "8be2d445-6305-402c-898e-f9c5a6d7f8f6",
-              "parentUUID": "a827e10b-9b33-49e0-9267-8dc17f42ac6d",
+              "err": {},
+              "uuid": "b5b25ca1-3bc1-40cb-8f87-aa1bef8a7523",
+              "parentUUID": "9801e105-5734-4b9a-bf87-4f9c01fd1134",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o quadro de pixels aparece abaixo da paleta de cores",
               "fullTitle": "4 - Adicione à página um quadro de pixels, com 25 pixels. Verifica se o quadro de pixels aparece abaixo da paleta de cores",
               "timedOut": null,
-              "duration": 4962,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#color-palette').then(function (palette) {\n  cy.get('#pixel-board').should('be.belowOf', palette);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "22e242fb-9a92-40a9-b51e-1b0cd7c76228",
-              "parentUUID": "a827e10b-9b33-49e0-9267-8dc17f42ac6d",
+              "err": {},
+              "uuid": "fbcb3d11-19f3-425d-903b-73f16721225a",
+              "parentUUID": "9801e105-5734-4b9a-bf87-4f9c01fd1134",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "930e589e-2d75-4ee0-8623-f099e8067b3c",
-            "cd4b9af1-4046-4620-b909-cad8ef8d5d41",
-            "8be2d445-6305-402c-898e-f9c5a6d7f8f6",
-            "22e242fb-9a92-40a9-b51e-1b0cd7c76228"
+            "3b1f1c5d-cca6-45c9-995a-62fa6d711f24"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 19882,
+          "skipped": [
+            "538485f9-7ad9-4b5e-a939-6bccfb109178",
+            "b5b25ca1-3bc1-40cb-8f87-aa1bef8a7523",
+            "fbcb3d11-19f3-425d-903b-73f16721225a"
+          ],
+          "duration": 1277,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "070bb0f3-e277-471d-93f7-92dc7a8f4ab1",
+          "uuid": "aa9d1d6b-7818-4806-a791-3463d637fd6e",
           "title": "5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel.",
           "fullFile": "",
           "file": "",
@@ -436,7 +403,7 @@
               "title": "Verifica se o quadro de pixels tem altura e comprimento de 5 elementos",
               "fullTitle": "5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel. Verifica se o quadro de pixels tem altura e comprimento de 5 elementos",
               "timedOut": null,
-              "duration": 4972,
+              "duration": 1480,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -445,12 +412,12 @@
               "context": null,
               "code": "cy.get('.pixel').should('have.length', 25).each(function (pixel) {\n  expect(pixel).to.have.css('background-color', WHITE);\n}).and(function (pixels) {\n  var rows = chunk(pixels, 5);\n  rows.forEach(function (row) {\n    for (var index = 1; index < row.length; index += 1) {\n      var current = pixels[index];\n      var previous = pixels[index - 1];\n      cy.wrap(current).should('be.onTheRightOf', previous).and('be.horizontallyAlignedWith', previous);\n    }\n  });\n  for (var index = 1; index < 5; index += 1) {\n    expect(pixels[index * 5]).to.be.belowOf(pixels[(index - 1) * 5]);\n  }\n});",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '5 - Faça com que cada eleme...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '5 - Faça com que cada eleme...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "2fa513be-de52-498b-990d-28fb86824e7b",
-              "parentUUID": "070bb0f3-e277-471d-93f7-92dc7a8f4ab1",
+              "uuid": "31e50fa8-7755-4b1a-82bd-0ca326cc1c8d",
+              "parentUUID": "aa9d1d6b-7818-4806-a791-3463d637fd6e",
               "isHook": false,
               "skipped": false
             },
@@ -458,40 +425,37 @@
               "title": "Verifica se 40 pixels é o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.",
               "fullTitle": "5 - Faça com que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel. Verifica se 40 pixels é o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.",
               "timedOut": null,
-              "duration": 4963,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.pixel').each(function (pixel) {\n  cy.wrap(pixel).should('have.css', 'height', '40px').and('have.css', 'width', '40px').and('have.css', 'border', \"1px solid \".concat(BLACK));\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "5be39f72-a2e2-46c9-bcbc-aaadc6036a1c",
-              "parentUUID": "070bb0f3-e277-471d-93f7-92dc7a8f4ab1",
+              "err": {},
+              "uuid": "72530dca-603b-4b54-a3c2-e5a01e902862",
+              "parentUUID": "aa9d1d6b-7818-4806-a791-3463d637fd6e",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "2fa513be-de52-498b-990d-28fb86824e7b",
-            "5be39f72-a2e2-46c9-bcbc-aaadc6036a1c"
+            "31e50fa8-7755-4b1a-82bd-0ca326cc1c8d"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 9935,
+          "skipped": [
+            "72530dca-603b-4b54-a3c2-e5a01e902862"
+          ],
+          "duration": 1480,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "f404efd6-5cd5-40a4-9492-142604dd67d2",
+          "uuid": "44b66152-a3e9-4177-9378-734468c96755",
           "title": "6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels",
           "fullFile": "",
           "file": "",
@@ -502,7 +466,7 @@
               "title": "Verifica se o elemento da cor preta possui, inicialmente, a `classe` `selected`",
               "fullTitle": "6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels Verifica se o elemento da cor preta possui, inicialmente, a `classe` `selected`",
               "timedOut": null,
-              "duration": 4924,
+              "duration": 1739,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -511,12 +475,12 @@
               "context": null,
               "code": "cy.get('.selected').first().should('have.css', 'background-color', BLACK);",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.selected', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.selected', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '6 - Defina a cor preta como...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '6 - Defina a cor preta como...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "59367b57-3506-4179-bd09-c01f27be9eb4",
-              "parentUUID": "f404efd6-5cd5-40a4-9492-142604dd67d2",
+              "uuid": "ba70362c-09d3-4c2c-b4fc-ad6f1c8f62f0",
+              "parentUUID": "44b66152-a3e9-4177-9378-734468c96755",
               "isHook": false,
               "skipped": false
             },
@@ -524,40 +488,37 @@
               "title": "Verifica se nenhuma outra cor da paleta tem a `classe` `selected`",
               "fullTitle": "6 - Defina a cor preta como cor inicial. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels Verifica se nenhuma outra cor da paleta tem a `classe` `selected`",
               "timedOut": null,
-              "duration": 4991,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color:not(:first-child)').each(function (color) {\n  cy.wrap(color).should('not.have.class', 'selected');\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color:not(:first-child)', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color:not(:first-child)', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "031fb433-6e7e-472d-8c03-d72a8b9820b6",
-              "parentUUID": "f404efd6-5cd5-40a4-9492-142604dd67d2",
+              "err": {},
+              "uuid": "5991dcd9-8da0-4efa-bf14-cf73290f611b",
+              "parentUUID": "44b66152-a3e9-4177-9378-734468c96755",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "59367b57-3506-4179-bd09-c01f27be9eb4",
-            "031fb433-6e7e-472d-8c03-d72a8b9820b6"
+            "ba70362c-09d3-4c2c-b4fc-ad6f1c8f62f0"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 9915,
+          "skipped": [
+            "5991dcd9-8da0-4efa-bf14-cf73290f611b"
+          ],
+          "duration": 1739,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "a16ee30b-a623-4170-a2ed-69089d0aa0d0",
+          "uuid": "cf1739fb-da21-4ea3-8684-f784106ae156",
           "title": "7 - Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro.",
           "fullFile": "",
           "file": "",
@@ -568,7 +529,7 @@
               "title": "Verifica se somente uma cor da paleta de cores tem a classe `selected` de cada vez",
               "fullTitle": "7 - Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro. Verifica se somente uma cor da paleta de cores tem a classe `selected` de cada vez",
               "timedOut": null,
-              "duration": 5124,
+              "duration": 1276,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -577,12 +538,12 @@
               "context": null,
               "code": "cy.get('.color').each(function (selectedColor, selectedColorIndex) {\n  cy.wrap(selectedColor).click();\n  cy.get('.color').each(function (color, colorIndex) {\n    if (colorIndex === selectedColorIndex) {\n      expect(color).to.have[\"class\"]('selected');\n    } else {\n      expect(color).not.to.have[\"class\"]('selected');\n    }\n  });\n});",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '7 - Clicar em uma das cores...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '7 - Clicar em uma das cores...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "d377fde6-4d9e-443c-bf63-cc4611a639eb",
-              "parentUUID": "a16ee30b-a623-4170-a2ed-69089d0aa0d0",
+              "uuid": "f169e34a-1f8b-44ca-aafe-21ff9d47ea9b",
+              "parentUUID": "cf1739fb-da21-4ea3-8684-f784106ae156",
               "isHook": false,
               "skipped": false
             },
@@ -590,40 +551,37 @@
               "title": "Verifica se os pixels dentro do quadro não têm a classe `selected` quando são clicados",
               "fullTitle": "7 - Clicar em uma das cores da paleta, faz com que ela seja selecionada e utilizada para preencher os pixels no quadro. Verifica se os pixels dentro do quadro não têm a classe `selected` quando são clicados",
               "timedOut": null,
-              "duration": 4991,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  var backgroundColor = color.css('background-color');\n  cy.wrap(color).click();\n  cy.get('.pixel').each(function (pixel) {\n    cy.wrap(pixel).click().should('not.have.class', 'selected');\n  });\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "bef87cb2-3a26-4318-8e1e-04d51ac18e7a",
-              "parentUUID": "a16ee30b-a623-4170-a2ed-69089d0aa0d0",
+              "err": {},
+              "uuid": "4ac05eaf-1103-46a3-a5b1-1570df3a6af4",
+              "parentUUID": "cf1739fb-da21-4ea3-8684-f784106ae156",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "d377fde6-4d9e-443c-bf63-cc4611a639eb",
-            "bef87cb2-3a26-4318-8e1e-04d51ac18e7a"
+            "f169e34a-1f8b-44ca-aafe-21ff9d47ea9b"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 10115,
+          "skipped": [
+            "4ac05eaf-1103-46a3-a5b1-1570df3a6af4"
+          ],
+          "duration": 1276,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "7d455ff7-a060-4553-b6c3-dfacfbf885c3",
+          "uuid": "4f177ffb-bbf1-4248-ba92-0d743356c5fb",
           "title": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada.",
           "fullFile": "",
           "file": "",
@@ -634,7 +592,7 @@
               "title": "Verifica se ao carregar a página deve ser possível pintar os pixels de preto",
               "fullTitle": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada. Verifica se ao carregar a página deve ser possível pintar os pixels de preto",
               "timedOut": null,
-              "duration": 5107,
+              "duration": 1467,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -643,12 +601,12 @@
               "context": null,
               "code": "cy.get('.pixel').each(function (pixel) {\n  cy.wrap(pixel).click().should('have.css', 'background-color', BLACK);\n});",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.pixel', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '8 - Clicar em um pixel dent...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '8 - Clicar em um pixel dent...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "20d89ac6-d107-49da-a3b6-f69df344781a",
-              "parentUUID": "7d455ff7-a060-4553-b6c3-dfacfbf885c3",
+              "uuid": "546e3438-0f3e-4c92-85ec-02f71df5081d",
+              "parentUUID": "4f177ffb-bbf1-4248-ba92-0d743356c5fb",
               "isHook": false,
               "skipped": false
             },
@@ -656,63 +614,56 @@
               "title": "Verifica se após selecionar uma outra cor na paleta, é possível pintar os pixels com essa cor",
               "fullTitle": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada. Verifica se após selecionar uma outra cor na paleta, é possível pintar os pixels com essa cor",
               "timedOut": null,
-              "duration": 4994,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').each(function (color) {\n  var backgroundColor = color.css('background-color');\n  cy.wrap(color).click();\n  cy.get('.pixel').each(function (pixel) {\n    cy.wrap(pixel).click().should('have.css', 'background-color', backgroundColor);\n  });\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "f623b3d4-82b6-4669-8cbc-735cb2a2c1c1",
-              "parentUUID": "7d455ff7-a060-4553-b6c3-dfacfbf885c3",
+              "err": {},
+              "uuid": "ea082a3b-a1fd-4d96-ade1-6e6aac2c555e",
+              "parentUUID": "4f177ffb-bbf1-4248-ba92-0d743356c5fb",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.",
               "fullTitle": "8 - Clicar em um pixel dentro do quadro após selecionar uma cor na paleta, faz com que o pixel seja preenchido com a cor selecionada. Verifica se somente o pixel que foi clicado foi preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.",
               "timedOut": null,
-              "duration": 5081,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "var colorToPixelIndexMap = {\n  0: 6,\n  1: 8,\n  2: 16,\n  3: 18\n};\ncy.get('.color').each(function (color, index) {\n  cy.wrap(color).click();\n  var backgroundColor = color.css('background-color');\n  var clickedPixelIndex = colorToPixelIndexMap[index];\n  cy.get('.pixel').eq(clickedPixelIndex).click();\n  cy.get('.pixel').eq(clickedPixelIndex - 1).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 1).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex - 5).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 5).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex - 6).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex - 4).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 4).should('not.have.css', 'background-color', backgroundColor);\n  cy.get('.pixel').eq(clickedPixelIndex + 6).should('not.have.css', 'background-color', backgroundColor);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "9b2f9b35-18f1-4f2b-ad27-4a6b3af88cae",
-              "parentUUID": "7d455ff7-a060-4553-b6c3-dfacfbf885c3",
+              "err": {},
+              "uuid": "372d1018-90ec-4a56-a1da-ae6f52d9b8d5",
+              "parentUUID": "4f177ffb-bbf1-4248-ba92-0d743356c5fb",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "20d89ac6-d107-49da-a3b6-f69df344781a",
-            "f623b3d4-82b6-4669-8cbc-735cb2a2c1c1",
-            "9b2f9b35-18f1-4f2b-ad27-4a6b3af88cae"
+            "546e3438-0f3e-4c92-85ec-02f71df5081d"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 15182,
+          "skipped": [
+            "ea082a3b-a1fd-4d96-ade1-6e6aac2c555e",
+            "372d1018-90ec-4a56-a1da-ae6f52d9b8d5"
+          ],
+          "duration": 1467,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "980086aa-5b75-4e5e-88db-bcd7035aae3d",
+          "uuid": "fefaf0b7-59fd-43df-8438-b3afa50850a5",
           "title": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.",
           "fullFile": "",
           "file": "",
@@ -723,7 +674,7 @@
               "title": "Verifica se o botão tem o `id` denominado `clear-board`",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se o botão tem o `id` denominado `clear-board`",
               "timedOut": null,
-              "duration": 5435,
+              "duration": 1621,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -732,12 +683,12 @@
               "context": null,
               "code": "cy.get('#clear-board').should('be.visible');",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#clear-board', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#clear-board', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '9 - Crie um botão que, ao s...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '9 - Crie um botão que, ao s...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "1c3c598f-624f-4cd7-a5b7-fe1b675ec3e5",
-              "parentUUID": "980086aa-5b75-4e5e-88db-bcd7035aae3d",
+              "uuid": "5776580d-c74d-42a6-9f63-45e9ebd30eaa",
+              "parentUUID": "fefaf0b7-59fd-43df-8438-b3afa50850a5",
               "isHook": false,
               "skipped": false
             },
@@ -745,86 +696,75 @@
               "title": "Verifica se o botão está posicionado entre a paleta de cores e o quadro de pixels",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se o botão está posicionado entre a paleta de cores e o quadro de pixels",
               "timedOut": null,
-              "duration": 5179,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#color-palette').then(function (palette) {\n  cy.get('#clear-board').should('be.belowOf', palette);\n});\ncy.get('#clear-board').then(function (clearBtn) {\n  cy.get('#pixel-board').should('be.belowOf', clearBtn);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "cbeed321-4046-403c-8a25-de6264b4b8d9",
-              "parentUUID": "980086aa-5b75-4e5e-88db-bcd7035aae3d",
+              "err": {},
+              "uuid": "9de8c67f-5101-42b6-acb0-b690965f5db3",
+              "parentUUID": "fefaf0b7-59fd-43df-8438-b3afa50850a5",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o texto do botão é 'Limpar'",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se o texto do botão é 'Limpar'",
               "timedOut": null,
-              "duration": 5264,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#clear-board').should('contain.text', 'Limpar');",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#clear-board', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#clear-board', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "131828a6-801e-4a18-bd0c-e2f2cc9c1809",
-              "parentUUID": "980086aa-5b75-4e5e-88db-bcd7035aae3d",
+              "err": {},
+              "uuid": "4c894d17-5ac5-4276-b569-7a5bc28627d7",
+              "parentUUID": "fefaf0b7-59fd-43df-8438-b3afa50850a5",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se ao clicar no botão, o quadro de pixels é totalmente preenchido de branco",
               "fullTitle": "9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco. Verifica se ao clicar no botão, o quadro de pixels é totalmente preenchido de branco",
               "timedOut": null,
-              "duration": 5259,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').eq(1).then(function (color) {\n  var backgroundColor = color.css('background-color');\n  cy.wrap(color).click();\n  cy.get('.pixel').each(function (pixel) {\n    cy.wrap(pixel).click().should('have.css', 'background-color', backgroundColor);\n  });\n});\ncy.get('#clear-board').click();\ncy.get('.pixel').each(function (pixel) {\n  cy.wrap(pixel).should('have.css', 'background-color', WHITE);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "004e86e1-0e13-49ec-8342-cd81de40865d",
-              "parentUUID": "980086aa-5b75-4e5e-88db-bcd7035aae3d",
+              "err": {},
+              "uuid": "9e42801c-c2f0-4b3e-a0e4-47888b37f0c2",
+              "parentUUID": "fefaf0b7-59fd-43df-8438-b3afa50850a5",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "1c3c598f-624f-4cd7-a5b7-fe1b675ec3e5",
-            "cbeed321-4046-403c-8a25-de6264b4b8d9",
-            "131828a6-801e-4a18-bd0c-e2f2cc9c1809",
-            "004e86e1-0e13-49ec-8342-cd81de40865d"
+            "5776580d-c74d-42a6-9f63-45e9ebd30eaa"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 21137,
+          "skipped": [
+            "9de8c67f-5101-42b6-acb0-b690965f5db3",
+            "4c894d17-5ac5-4276-b569-7a5bc28627d7",
+            "9e42801c-c2f0-4b3e-a0e4-47888b37f0c2"
+          ],
+          "duration": 1621,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "bae5e335-4509-4116-9d19-340d9296efb7",
+          "uuid": "466abb18-13d3-477d-aaa3-c47a5f72158b",
           "title": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.",
           "fullFile": "",
           "file": "",
@@ -835,7 +775,7 @@
               "title": "Verifica se existe um input com o id `board-size`",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se existe um input com o id `board-size`",
               "timedOut": null,
-              "duration": 5397,
+              "duration": 1382,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -844,12 +784,12 @@
               "context": null,
               "code": "cy.get('#board-size').should('be.visible');",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '10 - Faça o quadro de pixel...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '10 - Faça o quadro de pixel...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "c53ab15e-0900-4efa-953f-088e18346ffe",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "uuid": "9b92b9ce-a53b-4cb5-853c-2a7b0f3fe2e2",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
               "skipped": false
             },
@@ -857,201 +797,170 @@
               "title": "Verifica se existe um botão com o id `generate-board`",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se existe um botão com o id `generate-board`",
               "timedOut": null,
-              "duration": 5178,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#generate-board').should('be.visible');",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#generate-board', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#generate-board', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "76e3321d-6fd8-445e-9203-00eadf1546ed",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "1132fc50-884d-4e00-b8b6-536ba4529262",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o input só aceita número maiores que zero. Essa restrição deve ser feita usando os atributos do elemento `input`",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o input só aceita número maiores que zero. Essa restrição deve ser feita usando os atributos do elemento `input`",
               "timedOut": null,
-              "duration": 5333,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#board-size[type=\\'number\\'][min=\\'1\\']');",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size[type='number'][min='1']', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size[type='number'][min='1']', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "e5934014-6523-42a1-b1c3-67a28a2ee074",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "79ccdde6-fd55-4f34-b519-5a5fee44f265",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o botão contém o texto 'VQV'",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o botão contém o texto 'VQV'",
               "timedOut": null,
-              "duration": 5201,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#generate-board').contains(/vqv/i);",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#generate-board', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#generate-board', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "d423d9ac-9d2b-43d9-ba2c-750854dadbc9",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "d352d071-c60a-42ec-9079-f875d31adc34",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o input está posicionado entre a paleta de cores e o quadro de pixels",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o input está posicionado entre a paleta de cores e o quadro de pixels",
               "timedOut": null,
-              "duration": 5251,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#color-palette').then(function (palette) {\n  cy.get('#board-size').should('be.belowOf', palette);\n});\ncy.get('#board-size').then(function (palette) {\n  cy.get('#pixel-board').should('be.belowOf', palette);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#color-palette', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "3c83b034-d4ed-4909-a9f8-336f1d9b445e",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "a1434406-3c5d-4f96-9f31-49ffee31e822",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o botão está posicionado ao lado do input",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o botão está posicionado ao lado do input",
               "timedOut": null,
-              "duration": 5017,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#board-size').then(function (board) {\n  cy.get('#generate-board').should('be.onTheRightOf', board);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "1a9fbf73-f1b6-4f13-804c-1b7289825188",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "9a8eecf6-afe1-4a15-a03b-4ef6c8c05e2e",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se nenhum valor for colocado no input ao clicar no botão, um `alert` é exibido com o texto: 'Board inválido!'",
               "timedOut": null,
-              "duration": 5141,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "var alerted = false;\ncy.on('window:alert', function (msg) {\n  return alerted = msg;\n});\ncy.get('#generate-board').click().then(function () {\n  return expect(alerted).to.match(/Board inválido!/i);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#generate-board', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#generate-board', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "b9501a26-c4ec-46de-a6ef-bea020a41058",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "369112da-ad1b-4c93-b116-8bbedc56b9d6",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se ao clicar no botão com um valor preenchido, o tamanho do board muda.",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se ao clicar no botão com um valor preenchido, o tamanho do board muda.",
               "timedOut": null,
-              "duration": 5109,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#board-size').clear().type(10);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 100);",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "88f4281c-dabc-494c-ac92-c728a9400e61",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "affa09ce-152e-4fe8-bbee-9b43906cb794",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se o novo quadro tem todos os pixels preenchidos com a cor branca",
               "fullTitle": "10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário. Verifica se o novo quadro tem todos os pixels preenchidos com a cor branca",
               "timedOut": null,
-              "duration": 4981,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#board-size').clear().type(6);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 36).each(function (pixel) {\n  expect(pixel).to.have.css('background-color', WHITE);\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "c8114560-d0e9-4ba1-bc9b-8a07d8337fa2",
-              "parentUUID": "bae5e335-4509-4116-9d19-340d9296efb7",
+              "err": {},
+              "uuid": "5e27490d-275f-4f2c-88b4-eb1f5860beec",
+              "parentUUID": "466abb18-13d3-477d-aaa3-c47a5f72158b",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "c53ab15e-0900-4efa-953f-088e18346ffe",
-            "76e3321d-6fd8-445e-9203-00eadf1546ed",
-            "e5934014-6523-42a1-b1c3-67a28a2ee074",
-            "d423d9ac-9d2b-43d9-ba2c-750854dadbc9",
-            "3c83b034-d4ed-4909-a9f8-336f1d9b445e",
-            "1a9fbf73-f1b6-4f13-804c-1b7289825188",
-            "b9501a26-c4ec-46de-a6ef-bea020a41058",
-            "88f4281c-dabc-494c-ac92-c728a9400e61",
-            "c8114560-d0e9-4ba1-bc9b-8a07d8337fa2"
+            "9b92b9ce-a53b-4cb5-853c-2a7b0f3fe2e2"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 46608,
+          "skipped": [
+            "1132fc50-884d-4e00-b8b6-536ba4529262",
+            "79ccdde6-fd55-4f34-b519-5a5fee44f265",
+            "d352d071-c60a-42ec-9079-f875d31adc34",
+            "a1434406-3c5d-4f96-9f31-49ffee31e822",
+            "9a8eecf6-afe1-4a15-a03b-4ef6c8c05e2e",
+            "369112da-ad1b-4c93-b116-8bbedc56b9d6",
+            "affa09ce-152e-4fe8-bbee-9b43906cb794",
+            "5e27490d-275f-4f2c-88b4-eb1f5860beec"
+          ],
+          "duration": 1382,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "928cb390-7789-4d1c-9e64-ba3c6f937ea0",
+          "uuid": "b7c1dab5-ae75-403c-b538-aaaf08d91081",
           "title": "11 - Limite o tamanho mínimo e máximo do board.",
           "fullFile": "",
           "file": "",
@@ -1062,7 +971,7 @@
               "title": "Verifica se a altura máxima do board é 50",
               "fullTitle": "11 - Limite o tamanho mínimo e máximo do board. Verifica se a altura máxima do board é 50",
               "timedOut": null,
-              "duration": 5105,
+              "duration": 1170,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1071,12 +980,12 @@
               "context": null,
               "code": "cy.get('#board-size').clear().type(50);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 2500);",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '11 - Limite o tamanho mínim...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '11 - Limite o tamanho mínim...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "52bb553c-9550-44c0-8b43-f7a70a4cbd9a",
-              "parentUUID": "928cb390-7789-4d1c-9e64-ba3c6f937ea0",
+              "uuid": "be400f5a-2281-46d1-b97d-e8723b51fde1",
+              "parentUUID": "b7c1dab5-ae75-403c-b538-aaaf08d91081",
               "isHook": false,
               "skipped": false
             },
@@ -1084,63 +993,56 @@
               "title": "Verifica se a altura do board é 5 quando um valor menor é colocado no input",
               "fullTitle": "11 - Limite o tamanho mínimo e máximo do board. Verifica se a altura do board é 5 quando um valor menor é colocado no input",
               "timedOut": null,
-              "duration": 5127,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#board-size').clear().type(4);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 25);",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "6b888292-7cfe-44f7-bfb9-c656048f202c",
-              "parentUUID": "928cb390-7789-4d1c-9e64-ba3c6f937ea0",
+              "err": {},
+              "uuid": "c0ac67d0-16e4-4943-b4fb-bfce09a9c68a",
+              "parentUUID": "b7c1dab5-ae75-403c-b538-aaaf08d91081",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Verifica se a altura do board é 50 quando um valor maior é colocado no input",
               "fullTitle": "11 - Limite o tamanho mínimo e máximo do board. Verifica se a altura do board é 50 quando um valor maior é colocado no input",
               "timedOut": null,
-              "duration": 10248,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('#board-size').clear().type(51);\ncy.get('#generate-board').click();\ncy.get('.pixel').should('have.length', 2500);",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '#board-size', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "cb2981bb-0e12-4fe9-a9f2-b12842315227",
-              "parentUUID": "928cb390-7789-4d1c-9e64-ba3c6f937ea0",
+              "err": {},
+              "uuid": "5a132aad-9045-4c5e-a54d-00de0a21d24f",
+              "parentUUID": "b7c1dab5-ae75-403c-b538-aaaf08d91081",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "52bb553c-9550-44c0-8b43-f7a70a4cbd9a",
-            "6b888292-7cfe-44f7-bfb9-c656048f202c",
-            "cb2981bb-0e12-4fe9-a9f2-b12842315227"
+            "be400f5a-2281-46d1-b97d-e8723b51fde1"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 20480,
+          "skipped": [
+            "c0ac67d0-16e4-4943-b4fb-bfce09a9c68a",
+            "5a132aad-9045-4c5e-a54d-00de0a21d24f"
+          ],
+          "duration": 1170,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "86a88d41-6b37-4cb4-a0c3-2d74d11bd130",
+          "uuid": "6516b06a-f82e-4283-b21b-4b262afbce1d",
           "title": "12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.",
           "fullFile": "",
           "file": "",
@@ -1151,7 +1053,7 @@
               "title": "Verifica se as cores geradas na paleta são diferentes a cada carregamento da página",
               "fullTitle": "12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página. Verifica se as cores geradas na paleta são diferentes a cada carregamento da página",
               "timedOut": null,
-              "duration": 5249,
+              "duration": 1398,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1160,12 +1062,12 @@
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  var currentColors;\n  var previousColors;\n  previousColors = Array.from(colors).map(function (color) {\n    return Cypress.$(color).css('background-color');\n  });\n  for (var i = 0; i < 5; i += 1) {\n    cy.reload();\n    cy.get('.color').then(function (colors) {\n      currentColors = Array.from(colors).map(function (color) {\n        return Cypress.$(color).css('background-color');\n      });\n      expect(currentColors).not.to.deep.equal(previousColors);\n      previousColors = currentColors;\n    });\n  }\n});",
               "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
+                "message": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '12 - Faça com que as cores ...'",
+                "estack": "Uncaught TypeError: Cannot read property 'startWhite' of null\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: '12 - Faça com que as cores ...'\n    at http://localhost:37991/script.js:40:15",
                 "diff": null
               },
-              "uuid": "d25b21a7-e29d-442d-8ee6-6901f748ba03",
-              "parentUUID": "86a88d41-6b37-4cb4-a0c3-2d74d11bd130",
+              "uuid": "b6ffb90f-1e47-45a3-8663-15580e24181a",
+              "parentUUID": "6516b06a-f82e-4283-b21b-4b262afbce1d",
               "isHook": false,
               "skipped": false
             },
@@ -1173,34 +1075,31 @@
               "title": "Verifica se a cor preta ainda está presente e é a primeira na sua paleta de cores",
               "fullTitle": "12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página. Verifica se a cor preta ainda está presente e é a primeira na sua paleta de cores",
               "timedOut": null,
-              "duration": 5109,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get('.color').then(function (colors) {\n  var currentColors;\n  var previousColors;\n  previousColors = Array.from(colors).map(function (color) {\n    return Cypress.$(color).css('background-color');\n  });\n  expect(previousColors[0]).to.eq(BLACK);\n  for (var i = 0; i < 5; i += 1) {\n    cy.reload();\n    cy.get('.color').then(function (colors) {\n      currentColors = Array.from(colors).map(function (color) {\n        return Cypress.$(color).css('background-color');\n      });\n      expect(currentColors[0]).to.eq(BLACK);\n      expect(currentColors).not.to.deep.equal(previousColors);\n      previousColors = currentColors;\n    });\n  }\n});",
-              "err": {
-                "message": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.",
-                "estack": "CypressError: Timed out retrying: Expected to find element: '.color', but never found it.\n    at cypressErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:33931/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:33931/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:33931/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:33931/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:33931/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:33931/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:33931/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:33931/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:33931/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:33931/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:33931/__cypress/runner/cypress_runner.js:162024:14)",
-                "diff": null
-              },
-              "uuid": "9c7ae60d-5682-4f6a-9bb6-6efa1f299968",
-              "parentUUID": "86a88d41-6b37-4cb4-a0c3-2d74d11bd130",
+              "err": {},
+              "uuid": "446d5491-379d-4918-bc09-0487f9a33984",
+              "parentUUID": "6516b06a-f82e-4283-b21b-4b262afbce1d",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "d25b21a7-e29d-442d-8ee6-6901f748ba03",
-            "9c7ae60d-5682-4f6a-9bb6-6efa1f299968"
+            "b6ffb90f-1e47-45a3-8663-15580e24181a"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 10358,
+          "skipped": [
+            "446d5491-379d-4918-bc09-0487f9a33984"
+          ],
+          "duration": 1398,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
