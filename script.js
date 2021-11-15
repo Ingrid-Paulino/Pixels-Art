@@ -78,3 +78,10 @@ function pintaFrime(event) {
   event.target.style.backgroundColor = cor;
 }
 quadroPixel.addEventListener('click', pintaFrime);
+
+// Bonus
+const createInput = document.createElement('input');
+document.body.appendChild(createInput).id = 'board-size';
+const buttonInput = document.createElement('button');
+document.body.appendChild(buttonInput).innerText = 'VQV';
+buttonInput.id = 'generate-board';
