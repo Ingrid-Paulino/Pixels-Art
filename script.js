@@ -1,14 +1,14 @@
-// Requisito 1
+// Requisito 1 - Adicione à página o título "Paleta de Cores".
 const creatTittle = document.createElement('h1');
 document.body.appendChild(creatTittle).innerText = 'Paleta de Cores';
 creatTittle.id = 'title';
 
-// Requisito 2
+// Requisito 2 - Adicione à página uma paleta de quatro cores distintas.
 const colorPalette = document.createElement('section');
 colorPalette.id = 'color-palette';
 document.body.appendChild(colorPalette);
 
-// Requisito 3
+// Requisito 3 - Adicione a cor preta como a primeira cor da paleta de cores.
 const color = ['black', 'pink', 'blue', 'Yellow'];
 for (let index = 0; index < color.length; index += 1) {
   const i = color[index];
@@ -22,7 +22,8 @@ for (let index = 0; index < color.length; index += 1) {
     colorPalette.appendChild(divColor);
   }
 }
-// Requisito 9
+
+// Requisito 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 const createButton = document.createElement('button');
 document.body.appendChild(createButton).innerText = 'Limpar';
 createButton.id = 'clear-board';
@@ -35,7 +36,7 @@ function pintaTudoBranco() {
 }
 createButton.addEventListener('click', pintaTudoBranco);
 
-// Requisito 4
+// Requisito 4 - Adicione à página um quadro de pixels, com 25 pixels.
 const boardPixel = document.createElement('section');
 document.body.appendChild(boardPixel);
 
